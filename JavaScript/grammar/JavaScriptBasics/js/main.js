@@ -1,13 +1,10 @@
 'use strict';
 
+		document.querySelector('button').addEventListener('click', () => {
+			const item2 = document.createElement('li');
+			item2.textContent = 'item 2';
 
-function sum (a, b, c) {
-	// console.log(a + b + c);
-	return a + b + c;
-}
-
-// sum(1, 2, 3);
-// sum(3, 4, 5);
-
-const total = sum(1, 2, 3 ) + sum(3, 4, 5);
-console.log(total);
+			// const ulNode = document.querySelector('ul');
+			const ul = document.querySelector('ul');
+			ul.appendChild(item2);
+	});
