@@ -1,0 +1,71 @@
+body {
+	background: #bdc3c7;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+
+main {
+	width: 300px;
+	background: #ecf0f1;
+	padding: 20px;
+	border: 4px solid #fff;
+	/* 角を丸める */
+	border-radius: 12px; 
+	/* 全体に対して中央揃え */
+	margin: 16px auto; 
+	/* パネルを横並びにする */
+	display: flex;
+	/* 回り込み（改行）が有効化 */
+	flex-wrap:wrap;
+	/* パネルの間をあける */
+	justify-content: space-between;
+}
+
+.panel img{
+	width: 90px;
+	height: 110px;
+	/* 下のボタンとの間を空ける */
+	margin-bottom: 4px;
+}
+
+.stop {
+	cursor: pointer;
+	width: 90px;
+	height: 29px;
+	background: #f7ac0b;
+	/* 影 */
+	box-shadow: 0 4px 0 #f7910b;
+	/* 角を丸める */
+	border-radius: 16px;
+	line-height: 32px;
+	/* 左右中央 */
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	/* ボタンを連打してもテキストが選択状態にならないようにする */
+	user-select: none;
+	margin-bottom: 11px;
+}
+
+#spin {
+	cursor: pointer;
+	width: 280px;
+	height: 36px;
+	background: #3498db;
+	box-shadow: 0 4px 0 #2880b9;
+	border-radius: 18px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	user-select: none;
+	margin: 0 auto;
+}
+
+.unmatched {
+	opacity: 0.5;
+}
+
+.inactive {
+	opacity: 0.5;
+}
