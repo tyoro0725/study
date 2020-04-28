@@ -1,0 +1,86 @@
+main {
+	width: 300px;
+	margin: 0 auto;
+}
+
+img {
+	/* 画像の底の部分を img が配置されている行ボックスの底に合わせて配置する */
+	vertical-align: bottom;
+}
+
+ul {
+	/* 黒丸を取る */
+	list-style: none;
+	/* 余白のリセット */
+	padding: 0;
+	margin: 0;
+}
+
+#main {
+	width: 300px;
+	height: 200px;
+	margin-bottom: 8px;
+}
+
+nav {
+	margin-bottom: 8px;
+}
+
+nav ul {
+	/* 横並びにする */
+	display: flex;
+	/* 間をあけつつ均等に配置 */
+	justify-content: space-between;
+}
+
+nav li {
+	border: 1px solid #ddd;
+	/* 角を丸くする */
+	border-radius: 4px;
+	font-size: 12px;
+	/* 余白をつける */
+	padding: 4px;
+	/* 文字の中央揃え */
+	text-align: center;
+	cursor: pointer;
+	/* 連打された場合もテキストが選択されてしまわないようにする */
+	user-select: none;
+}
+
+/* カーソルを乗せたときにボタンの色を変える */
+nav li:hover {
+	background: #f8f8f8;
+}
+#play {
+	width: 140px;
+}
+
+#prev,
+#next {
+	width: 60px;
+}
+
+.thumbnails {
+	display: grid;
+	/* サムネ画像の幅を56px,5列で並べる */
+	grid-template-columns: repeat(5, 56px);
+	/* 余白 */
+	gap: 5px;
+}
+
+.thumbnails li{
+	/* クリックできることをわかりやすくするため */
+	cursor: pointer;
+	/* 色を薄くする */
+	opacity: 0.4;
+}
+
+/* サムネにカーソルをホバーしたとき、またはメインで表示されている画像に関するサムネ */
+.thumbnails li:hover,
+.thumbnails li.current {
+	/* 色を濃くする */
+	opacity: 1;
+}
+.thumbnails img {
+	width: 56px;
+}
