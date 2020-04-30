@@ -2,14 +2,12 @@
 
 {
 	const images = [
-		'img/pic00.png',
-		'img/pic01.png',
-		'img/pic02.png',
-		'img/pic03.png',
-		'img/pic04.png',
-		'img/pic05.png',
-		'img/pic06.png',
-		'img/pic07.png',
+		'img/pants01.jpg',
+		'img/pants02.jpg',
+		'img/pants03.jpg',
+		'img/pants04.jpg',
+		'img/pants05.jpg',
+		'img/pants06.jpg',
 	];
 	let currentIndex = 0;
 
@@ -54,7 +52,7 @@
 	prev.addEventListener('click', () => {
 		let target = currentIndex - 1;
 		if (target < 0) {
-			target = images.kength - 1;
+			target = images.length - 1;
 		}
 		document.querySelectorAll('.thumbnails > li')[target].click();
 	});
@@ -78,7 +76,7 @@
 			play.textContent = 'Pause';
 		} else {
 			clearTimeout(timeoutId);
-			lay.textContent = 'Play';
+			play.textContent = 'Play';
 		}
 		isPlaying = !isPlaying;
 	});

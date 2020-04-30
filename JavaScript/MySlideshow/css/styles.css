@@ -1,11 +1,14 @@
 main {
-	width: 300px;
+	width: 900px;
 	margin: 0 auto;
+	display:inline-block;
+	vertical-align: middle;
 }
 
 img {
 	/* 画像の底の部分を img が配置されている行ボックスの底に合わせて配置する */
 	vertical-align: bottom;
+	/* float: left; */
 }
 
 ul {
@@ -16,10 +19,17 @@ ul {
 	margin: 0;
 }
 
+.imgNav  {
+	float: left;
+	/* margin-left: 50px; */
+}
+
 #main {
-	width: 300px;
-	height: 200px;
-	margin-bottom: 8px;
+	width: 491px;
+	height: 589px;
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 nav {
@@ -31,6 +41,11 @@ nav ul {
 	display: flex;
 	/* 間をあけつつ均等に配置 */
 	justify-content: space-between;
+	/* float: left; */
+	margin-top: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
+	
 }
 
 nav li {
@@ -52,7 +67,7 @@ nav li:hover {
 	background: #f8f8f8;
 }
 #play {
-	width: 140px;
+	width: 60px;
 }
 
 #prev,
@@ -60,27 +75,37 @@ nav li:hover {
 	width: 60px;
 }
 
-.thumbnails {
-	display: grid;
-	/* サムネ画像の幅を56px,5列で並べる */
-	grid-template-columns: repeat(5, 56px);
-	/* 余白 */
-	gap: 5px;
+.thumbnailTitle {
+	margin-top: 45px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-family: monospace;
+	color: rgb(99, 72, 72);
 }
 
-.thumbnails li{
+.thumbnails {
+	display: grid;
+	grid-template-columns: repeat(4, 112px);
+	/* 余白 */
+	gap: 10px;
+	margin-left: 50px;
+}
+
+.thumbnails li {
 	/* クリックできることをわかりやすくするため */
 	cursor: pointer;
-	/* 色を薄くする */
-	opacity: 0.4;
+	/* 色を濃くする */
+	opacity: 1;
 }
 
 /* サムネにカーソルをホバーしたとき、またはメインで表示されている画像に関するサムネ */
 .thumbnails li:hover,
 .thumbnails li.current {
-	/* 色を濃くする */
-	opacity: 1;
+	/* 色を薄くする */
+	opacity: 0.4;
 }
 .thumbnails img {
-	width: 56px;
+	width: 112px;
+	height: 134px;
 }
